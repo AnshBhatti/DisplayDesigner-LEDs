@@ -95,10 +95,11 @@ for y in range(0,int(b)):
     dontcares=[]
     for x in range(0,2**int(a)):
         one=sheet[arr[int(a)+1+y]+str(3+x)].value
-        if one==1:
+        if one==1 or one=='1':
             ones.append(x)
         elif one=='x':
             dontcares.append(x)
+    print(ones)
     z=list(q.simplify(ones,dontcares))
     simp=''
     for b in range(0,len(z)):
